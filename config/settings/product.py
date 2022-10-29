@@ -4,4 +4,4 @@ from .base import * # base.pyを読み込む
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['公開ホスト']
+ALLOWED_HOSTS = ["*"]
