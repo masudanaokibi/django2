@@ -28,7 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
+    'myappB',
+    # 'app.myappA.apps.MyappaConfig'
 ]
 
 MIDDLEWARE = [
@@ -160,8 +162,18 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
 
 # ログイン/ログアウト後の遷移先を設定
+LOGIN_REDIRECT_URL= 'myappB:index'
+ACCOUNT_LOGOUT_REDIRECT_URL= 'account_login'
 # LOGIN_REDIRECT_URL = 'account_logout'
-ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+# LOGIN_REDIRECT_URL = 'myappB'
+# ACCOUNT_LOGIN_REDIRECT_URL = 'myappB'
+# ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+
+
+# LOGIN_REDIRECT_URL='myapp:home'      # ログイン
+
+# LOGOUT_REDIRECT_URL='myapp:login'    # ログアウト
+
 
 # ログアウトリンクのクリック一発でログアウトする設定
 ACCOUNT_LOGOUT_ON_GET = True
