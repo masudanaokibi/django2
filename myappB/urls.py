@@ -5,4 +5,5 @@ app_name = 'myappB'
 urlpatterns = [
     # path('', views.PersonListView.as_view())
     path('', views.index, name='index'),
+    path('dashboard/', views.dashboard, name='dashboard'),
 ]
