@@ -91,12 +91,12 @@ DATABASES = {
     # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': 'djangodb3',
         'USER': 'postgres',
         'PASSWORD': 'Zaq12wsx2!',
         'HOST': 'database-1.crr3xmeryalf.ap-northeast-1.rds.amazonaws.com',
         'PORT': '5432'
-        }
+    }
 }
 
 
